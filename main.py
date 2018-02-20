@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    error = None
     if request.method == 'POST':
          url = 'http://text-processing.com/api/phrases/'
          params = {'username': request.form['username'], 'password': request.form['password']}
