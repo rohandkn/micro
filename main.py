@@ -9,4 +9,4 @@ def login():
     r = requests.post(url, data=params)
     return render_template('login.html', error=r.text)
 
-app.run()
+app.run(host='0.0.0.0')
