@@ -7,7 +7,7 @@ app = Flask(__name__)
 def login():
     error = None
     if request.method == 'POST':
-         url = 'http://34.214.28.145:5000/auth'
+         url = 'http://0.0.0.0:5000/auth'
          params = {'username': request.form['username'], 'password': request.form['password']}
          r = requests.post(url, data=params)
          error = r.text
